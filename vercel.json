@@ -6,8 +6,11 @@
     { "src": "img/*", "use": "@vercel/static" }
   ],
   "routes": [
+    { "src": "/style.css", "dest": "/style.css" },
+    { "src": "/script.js", "dest": "/script.js" },
+    { "src": "/img/(.*)", "dest": "/img/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
-  ],
+    ],
   "headers": [
     {
       "source": "/script.js",
